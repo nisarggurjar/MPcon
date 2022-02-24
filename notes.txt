@@ -1,0 +1,21 @@
+{% load static %}
+
+
+# images => static/images/....
+
+1. cmd + f   /  ctrl + f
+
+2. search for "images/
+
+3. cmd + h   /  ctrl + h
+
+4. replace with : "{% static 'images/
+
+5. cmd + f   /  ctrl + f
+
+6. search for .jpg"
+
+7. replace with : .jpg' %}"
+
+
+

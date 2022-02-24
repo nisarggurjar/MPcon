@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Customer.views import Home
-
+from Management.views import ContactUs
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Home)
+    path('',Home, name = 'home'),
+    path('contact-us/', ContactUs, name='contact')
 ]

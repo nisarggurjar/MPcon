@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=40,null=True, blank=True)
+    number = models.IntegerField(null=True)
+    img = models.FileField()
+    disc = models.TextField()
+    email = models.EmailField()
+    Section = models.ForeignKey()
+    test = models.OneToOneField()
