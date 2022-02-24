@@ -18,4 +18,6 @@
 7. replace with : .jpg' %}"
 
 
+----------------------------
 
+model = Category   == In Database ==> Managment_Category
