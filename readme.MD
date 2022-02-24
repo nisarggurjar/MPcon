@@ -2,7 +2,7 @@
 
 ## To Start New Project 
 
-django-admin startproject <project name>
+django-admin startproject &lt;project name&gt;
 
 ## To Runserver 
 
@@ -18,7 +18,7 @@ python manage.py migrate
 
 ## To Start a App
 
-python manage.py startapp <app name>
+python manage.py startapp &lt;app name&gt;
 
 ##### Always add app name in installed_app list present in settings file 
 
@@ -33,25 +33,25 @@ python manage.py createsuperuser
 {%  load static %}
 
 2. To add Static Files 
-{% static '<file path>' %}
+{% static '&lt;file path&gt;' %}
 
 3. To add URL routing 
-{% url '<url_name>' %}
+{% url '&lt;url_name&gt;' %}
 
 4. To extend a html file
-{% extends '<file_name>' %}
+{% extends '&lt;file_name&gt;' %}
 
 5. To Make a Block
-{% block <block_body> %} {% endblock <block_body> %}
+{% block &lt;block_body&gt; %} {% endblock &lt;block_body&gt; %}
 
 6. if
-{% if <condition> %}
+{% if &lt;condition&gt; %}
 .....
 ....
 {% endif %}
 
 7. if else
-{% if <condition> %}
+{% if &lt;condition&gt; %}
 ...
 ...
 ...
@@ -62,19 +62,19 @@ python manage.py createsuperuser
 {% endif %}
 
 8. if elif
-{% if <condition> %}
+{% if &lt;condition&gt; %}
 ...
 ...
 ...
-{% elif <condition> %}
+{% elif &lt;condition&gt; %}
 ...
 ...
 ...
-{% elif <condition> %}
+{% elif &lt;condition&gt; %}
 ...
 ...
 ...
-{% elif <condition> %}
+{% elif &lt;condition&gt; %}
 ...
 ...
 ...
