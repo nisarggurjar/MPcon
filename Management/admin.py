@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Category, Students
+from .models import *
 
 admin.site.register(Category)
-admin.site.register(Students)
+admin.site.register(ContactForm)
+admin.site.register(SubCategory)
+admin.site.register(Product)
