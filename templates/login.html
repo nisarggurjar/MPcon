@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- breadcrumbs -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Login</li>
+    </ol>
+</nav>
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+    </div>
+    <div class="modal-body  pt-3 pb-5 px-sm-5">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <img src="{% static 'images/p3.png' %}" class="img-fluid" alt="login_image" />
+            </div>
+            <div class="col-md-6">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder=" " name="un" id="recipient-name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder=" " name="pwd" required="">
+                    </div>
+                    {% if err %}
+                    <p style="color: red;"> Username and Password Does not match </p>
+                    {% endif %}
+                    <div class="right-w3l">
+                        <input type="submit" class="form-control" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
