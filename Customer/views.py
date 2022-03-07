@@ -19,6 +19,8 @@ def Home(request):
 
 
 def SignUp(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     errorUn = False
     errorPWD = False
     errorPin = False
@@ -61,6 +63,8 @@ def SignUp(request):
     return render(request, 'register.html', data)
 
 def Login(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     err = False
     if request.method == "POST":
         un = request.POST['un']

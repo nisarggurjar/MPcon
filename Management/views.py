@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from Management.models import Category, ContactForm, SubCategory
+from Management.models import Category, ContactForm, Product, SubCategory
 
 def CommonData():
     categories = Category.objects.all()
@@ -20,6 +20,26 @@ def ContactUs(request):
         return redirect('home')
     data.update(CommonData())
     return render(request, 'contact.html', data)
+
+def ProductListPage(request, cid):
+    
+    # sub = SubCategory.objects.get(id = cid)
+    # products = Product.objects.filter(subCat__name = name)
+    products = Product.objects.filter(subCat_id = cid) #fieldname_id works only for pk with relational object
+    data = { 
+        "title":"Contact @ Fashion Hub",  
+        "products":products
+    }
+    request.session['user'] = request.user
+
+    print(request.session['user'])
+    data.update(CommonData())
+    return render(request, 'men.html', data)
+
+
+
+
+
 
 
 

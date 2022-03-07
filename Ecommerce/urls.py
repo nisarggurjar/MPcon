@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Customer.views import Home, LogOut, Login, SignUp
-from Management.views import ContactUs
+from Management.views import ContactUs, ProductListPage
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,5 +26,6 @@ urlpatterns = [
     path('contact-us/', ContactUs, name='contact'),
     path('register/', SignUp, name='register'),
     path('login/', Login, name='login'),
-    path("logout/", LogOut, name='logout')
+    path("logout/", LogOut, name='logout'),
+    path("productlist/<int:cid>/", ProductListPage, name="productlist")
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
